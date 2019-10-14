@@ -1,18 +1,16 @@
 
 public class VolleyballPlayers 
 	{
-		public int height; 
+		public double height; 
 		public String name;
 		public String position;
-		public int weight;
 		public int playerNumber;
 		
-		public VolleyballPlayers( int h, String n, String p, int w, int pN)
+		public VolleyballPlayers( double h, String n, String p, int pN)
 		{
 			height = h;
 			name = n;
-			position = p; 
-			weight = w;
+			position = p;
 			playerNumber = pN;
 		}
 
@@ -24,19 +22,11 @@ public class VolleyballPlayers
 			this.playerNumber = playerNumber;
 		}
 
-		public int getWeight() {
-			return weight;
-		}
-
-		public void setWeight(int weight) {
-			this.weight = weight;
-		}
-
-		public int getHeight() {
+		public double getHeight() {
 			return height;
 		}
 
-		public void setHeight(int height) {
+		public void setHeight(double height) {
 			this.height = height;
 		}
 
