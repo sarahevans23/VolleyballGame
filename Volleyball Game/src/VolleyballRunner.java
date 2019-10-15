@@ -54,184 +54,168 @@ public class VolleyballRunner
 		volleyballPositions.add(" 5.) Libero");
 		volleyballPositions.add(" 6.) DS");
 		
+		boolean stillGenerating = true;
+		while (stillGenerating == true)
+		{
 			for (String v : volleyballPositions)
 			{
 				System.out.println(v);
 			}
-			int counter = 1;
-			
-			if (counter <= 6)
-			{
-			boolean stillGenerating = true;
-			while (stillGenerating == true)
-			{
+		
 			System.out.println("Choose a player to generate! Click the corresponding number!");
 			int positionNumber = userInputInt.nextInt();
-			
 			if (positionNumber == 1)
 			{	
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
+				
 				System.out.println("How tall do you want your Outside to be? (ex. 5.9)");
 				outSideHeight = userInputDouble.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.height).setHeight(outSideHeight);
+				VolleyballPlayers.get(0).setHeight(outSideHeight);
 				
 				System.out.println("What do you want the name to be?");
 				outSideName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.Name).setName(outSideName);
+				VolleyballPlayers.get(0).setName(outSideName);
 				
 				System.out.println("What number do you want your player to have?");
 				outSideNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.PlayerNumber).setPlayerNumber(outSideNumber);
+				VolleyballPlayers.get(0).setPlayerNumber(outSideNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("Outside");
+				VolleyballPlayers.get(0).setPosition("Outside");
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				System.out.println(" ");
-				counter++;
 				stillGenerating = true;
 			}
 			
 			if (positionNumber == 2)
 			{
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
 				System.out.println("How tall do you want your Middle to be? (ex. 5.9) ");
 				middleHeight = userInputInt.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.Height).setHeight(middleHeight);
+				VolleyballPlayers.get(1).setHeight(middleHeight);
 				
 				System.out.println("What do you want the name to be?");
 				middleName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.Name).setName(middleName);
+				VolleyballPlayers.get(1).setName(middleName);
 				
 				System.out.println("What number do you want your player to have?");
 				middleNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.PlayerNumber).setPlayerNumber(middleNumber);
+				VolleyballPlayers.get(1).setPlayerNumber(middleNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("Middle");
+				VolleyballPlayers.get(1).setPosition("Middle");
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				counter++;
 				stillGenerating = true;
 			}
 			
 			if (positionNumber == 3)
 			{
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
 				System.out.println("How tall do you want your Right Side to be? (ex. 5.9) ");
 				rightSideHeight = userInputDouble.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.height).setHeight(rightSideHeight);
+				VolleyballPlayers.get(2).setHeight(rightSideHeight);
 				
 				System.out.println("What do you want the name to be?");
 				rightSideName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.Name).setName(rightSideName);
+				VolleyballPlayers.get(2).setName(rightSideName);
 				
 				System.out.println("What number do you want your player to have?");
 				rightSideNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.PlayerNumber).setPlayerNumber(rightSideNumber);
+				VolleyballPlayers.get(2).setPlayerNumber(rightSideNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("Right Side");
+				VolleyballPlayers.get(2).setPosition("Right Side");
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				counter++;
 				stillGenerating = true;
 			}
 			
 			if (positionNumber == 4)
 			{
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
 				System.out.println("How tall do you want your Setter to be? (ex. 5.9) ");
 				setterHeight = userInputDouble.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.height).setHeight(setterHeight);
+				VolleyballPlayers.get(3).setHeight(setterHeight);
 				
 				System.out.println("What do you want the name to be?");
 				setterName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.name).setName(setterName);
+				VolleyballPlayers.get(3).setName(setterName);
 				
 				System.out.println("What number do you want your player to have?");
 				setterNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.playerNumber).setPlayerNumber(setterNumber);
+				VolleyballPlayers.get(3).setPlayerNumber(setterNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("Setter");
+				VolleyballPlayers.get(3).setPosition("Setter");
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				counter++;
 				stillGenerating = true;
 			}
 			
 			if (positionNumber == 5)
 			{
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
 				System.out.println("How tall do you want your Libero to be? (ex. 5.9) ");
 				liberoHeight = userInputDouble.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.height).setHeight(liberoHeight);
+				VolleyballPlayers.get(4).setHeight(liberoHeight);
 				
 				System.out.println("What do you want the name to be?");
 				liberoName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.name).setName(liberoName);
+				VolleyballPlayers.get(4).setName(liberoName);
 				
 				System.out.println("What number do you want your player to have?");
 				liberoNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.playerNumber).setPlayerNumber(liberoNumber);
+				VolleyballPlayers.get(4).setPlayerNumber(liberoNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("Libero");
+				VolleyballPlayers.get(4).setPosition("Libero");
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				counter++;
 				stillGenerating = true;
 			}
 			
 			if (positionNumber == 6)
 			{
+				VolleyballPlayers.add(new VolleyballPlayers(0.0, "", "", 0));
 				System.out.println("How tall do you want your DS to be? (ex. 5.9) ");
 				dSHeight = userInputDouble.nextDouble();
-				VolleyballPlayers.get(VolleyballPlayers.height).setHeight(dSHeight);
+				VolleyballPlayers.get(5).setHeight(dSHeight);
 				
 				System.out.println("What do you want the name to be?");
 				dSName = userInputString.nextLine();
-				VolleyballPlayers.get(VolleyballPlayers.name).setName(dSName);
+				VolleyballPlayers.get(5).setName(dSName);
 				
 				System.out.println("What number do you want your player to have?");
 				dSNumber = userInputInt.nextInt();
-				VolleyballPlayers.get(VolleyballPlayers.playerNumber).setPlayerNumber(dSNumber);
+				VolleyballPlayers.get(5).setPlayerNumber(dSNumber);
 				
-				VolleyballPlayers.get(VolleyballPlayers.position).setPosition("DS"); 
+				VolleyballPlayers.get(5).setPosition("DS"); 
 				
 				volleyballPositions.remove(0);
 				for (String v : volleyballPositions)
 				{
 					System.out.println(v);
 				}
-				
-				counter++;
-				stillGenerating = true;
+				stillGenerating = false;
+			}
 			}
 		}
-	}
-			
-			else
-			{
-				System.out.println("Congratulations! You have finsihed generating your players! Let's get their stats!");
-			}
-}
 
 	public static void generateStats()
 	{
@@ -257,13 +241,7 @@ public class VolleyballRunner
 		
 		Scanner userInputString1 = new Scanner(System.in);
 		Scanner userInputInt1 = new Scanner(System.in); 
-		
-		System.out.println("Here are your players: ");
-		for (VolleyballPlayers v : VolleyballPlayers)
-		{
-			System.out.println(v);
-		}
-		
+
 		System.out.println("Now let's get their stats!");
 		System.out.println(" ");
 		
@@ -296,7 +274,7 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points : " + oHAttackPoints + "      Passing Points: " +oHPassingPoints + "      Blocking Points: " +oHBlockingPoints); 
-		
+		System.out.println(" ");
 		//middle player 
 		System.out.println("Next is the Middle...");
 		if (middleHeight >= 5.10 && middleHeight <= 6.8)
@@ -325,6 +303,7 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points: " + mAttackPoints + "      Passing Points: " + mPassingPoints + "      BlockingPoints: " + mBlockingPoints );
+		System.out.println(" ");
 		
 		//right side player 
 		System.out.println("Next is the Right Side... ");
@@ -355,6 +334,7 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points: " + rAttackPoints + "      Passing Points: " + rPassingPoints + "      Blocking Points: " + rBlockingPoints);
+		System.out.println(" ");
 		
 		//setter player 
 		System.out.println("Next is the Setter...");
@@ -389,6 +369,7 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points: " + sAttackPoints + "      Passing Points: " + sPassingPoints + "      Blocking Points: " + sBlockingPoints + "      Setting Points: " + settingPoints);
+		System.out.println(" ");
 		
 		//libero player 
 		System.out.println("Next is the libero...");
@@ -418,7 +399,7 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points: " + lAttackPoints + "      Passing Points: " + lPassingPoints + "      BlockingPoints: " + lBlockingPoints);
-		
+		System.out.println(" ");
 		//DS player 
 		System.out.println("Lastly is the DS..."); 
 		if (dSHeight >= 5.3 || dSHeight <= 5.7)
@@ -447,11 +428,12 @@ public class VolleyballRunner
 		}
 		delay();
 		System.out.println("Attacking Points: " + dSAttackPoints + "      Passing Points: " + dSPassingPoints + "      Blocking Points: " + dSBlockingPoints);
+		System.out.println(" ");
 		
 		System.out.println("Congratulations! You have created your team!"); 
 		System.out.println("What team name do you want for your team?");
 		String teamName = userInputString1.nextLine(); 
-		System.out.println("Your team name is:" + teamName); 
+		System.out.println("Your team name is: " + teamName); 
 		//System.out.println("Who do you want your captain to be?");
 		//for (String v : volleyballPositions)
 		//{
