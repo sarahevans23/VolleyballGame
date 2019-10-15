@@ -8,10 +8,10 @@ public class VolleyballPlayers
 		
 		public VolleyballPlayers( double h, String n, String p, int pN)
 		{
-			height = h;
-			name = n;
-			position = p;
-			playerNumber = pN;
+			this.height = h;
+			this.name = n;
+			this.position = p;
+			this.playerNumber = pN;
 		}
 
 		public int getPlayerNumber() {
