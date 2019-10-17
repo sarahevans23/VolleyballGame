@@ -54,13 +54,14 @@ public class VolleyballRunner
 		volleyballPositions.add(" 5.) Libero");
 		volleyballPositions.add(" 6.) DS");
 		
-		boolean stillGenerating = true;
-		while (stillGenerating == true)
-		{
 			for (String v : volleyballPositions)
 			{
 				System.out.println(v);
 			}
+			
+			boolean stillGenerating = true;
+			while (stillGenerating == true)
+			{
 		
 			System.out.println("Choose a player to generate! Click the corresponding number!");
 			int positionNumber = userInputInt.nextInt();
@@ -275,6 +276,7 @@ public class VolleyballRunner
 		delay();
 		System.out.println("Attacking Points : " + oHAttackPoints + "      Passing Points: " +oHPassingPoints + "      Blocking Points: " +oHBlockingPoints); 
 		System.out.println(" ");
+		
 		//middle player 
 		System.out.println("Next is the Middle...");
 		if (middleHeight >= 5.10 && middleHeight <= 6.8)
@@ -400,6 +402,7 @@ public class VolleyballRunner
 		delay();
 		System.out.println("Attacking Points: " + lAttackPoints + "      Passing Points: " + lPassingPoints + "      BlockingPoints: " + lBlockingPoints);
 		System.out.println(" ");
+		
 		//DS player 
 		System.out.println("Lastly is the DS..."); 
 		if (dSHeight >= 5.3 || dSHeight <= 5.7)
@@ -434,14 +437,47 @@ public class VolleyballRunner
 		System.out.println("What team name do you want for your team?");
 		String teamName = userInputString1.nextLine(); 
 		System.out.println("Your team name is: " + teamName); 
-		//System.out.println("Who do you want your captain to be?");
-		//for (String v : volleyballPositions)
-		//{
-		//	System.out.println(v);
-		//}
 		
-		//int captainPosition = userInputInt.nextInt(); 
+		System.out.println("Who do you want your captain to be?");
 		
+		volleyballPositions.add(" 1.) Outside");
+		volleyballPositions.add(" 2.) Middle");
+		volleyballPositions.add(" 3.) Right Side" );
+		volleyballPositions.add(" 4.) Setter");
+		volleyballPositions.add(" 5.) Libero");
+		volleyballPositions.add(" 6.) DS");
+		
+		for ( String v : volleyballPositions)
+		{
+			System.out.println(v);
+		}
+		
+		int captainPosition = userInputInt1.nextInt(); 
+		
+		if (captainPosition == 1)
+		{
+			System.out.println("Your captain is: " + outSideName);
+		}
+		if (captainPosition == 2)
+		{
+			System.out.println("Your captain is: " + middleName);
+		}
+		if (captainPosition == 3)
+		{
+			System.out.println("Your captain is: " + rightSideName); 
+		}
+		if (captainPosition == 4)
+		{
+			System.out.println("Your captain is: " + setterName);
+		}
+		if (captainPosition == 5)
+		{
+			System.out.println("Your captain is: " + liberoName); 
+		}
+		if (captainPosition == 6)
+		{
+			System.out.println("Your captain is: " + dSName); 
+		}
 	}
 	
 	public static void delay()
@@ -456,7 +492,7 @@ public class VolleyballRunner
 		}
 	}
 
-	//public static void generateCourt()
+	public static void generateCourt()
 	{
 		
 		
